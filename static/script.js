@@ -1,6 +1,6 @@
 // 1. matches buttons
 document.addEventListener('DOMContentLoaded', () => {
-const tabs = ['aboutme', 'gimmicks', 'comforts', 'article'];
+const tabs = ['aboutme', 'gimmicks', 'comforts', 'art'];
 let currentIndex = 0;
 const switchTab = (newIndex) => {
 if (newIndex === currentIndex) return;
