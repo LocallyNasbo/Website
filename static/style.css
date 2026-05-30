@@ -1,0 +1,422 @@
+/* WEBSITE CSS */
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital@0;1&display=swap');
+
+:root {
+    --web-font: "Roboto", Roboto Light, Roboto Bold;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: "Roboto";
+	color: white;
+}
+
+container[type="var-a"] h1 {
+  font-family: 'Roboto Light', sans-serif;
+  font-weight: 300;
+  font-size: 28px; 
+  margin: 0;
+  line-height: 1;
+}
+container[type="var-a"] {
+  display: flex;
+  flex-direction: column;
+}
+container[type="var-a"] > img {
+  border-radius: 50%;
+  vertical-align: middle;
+}
+container[type="var-a"] h1 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+@keyframes bg_gradient {
+0% {
+background-position: 0% 50%;
+}
+25% {
+background-position: 100% 50%;
+}
+50% {
+background-position: 50% 50%;
+}
+75% {
+background-position: 25% 50%;
+}
+100% {
+background-position: 0% 50%;
+}
+}
+/* == the big packages of CSS == */
+
+html, body {
+  background: center/200% 250% no-repeat linear-gradient(-45deg, #9a1fff, #b96bff, #ffb245, #ffbC2C);
+  font-family: var(--web-font);
+  animation: bg_gradient 15s ease infinite;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+ font-family: 'Roboto Light';
+ font-weight: normal;
+}
+h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+body, h1, h2, p, button, input {
+  font-family: 'Inter', 'Roboto', sans-serif !important;
+}
+button {
+  pointer-events: all;
+}
+.hide {
+ display: none;
+}
+
+/* == The main page == */
+
+[type="mainpage"] {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(25px) saturate(150%);
+  -webkit-backdrop-filter: blur(25px) saturate(150%);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 65%;
+  width: 85%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: nowrap;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3),
+  inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+/* mobile view */
+@media screen and (max-width: 800px) {
+[type="mainpage"] {
+flex-direction: column; 
+height: 90%;
+width: 95%;
+overflow-y: auto;
+}
+div[type="mainpage"] > cr {
+display: none; 
+}
+container[type="var-a"] {
+width: 100% !important;
+padding: 20px;
+border-bottom: 1px solid #ffffff1a;
+text-align: center;
+}
+container[type="var-a"] > div {
+justify-content: center;
+}
+container[type="var-a"] > div.tabs {
+display: flex;
+overflow-x: auto;
+padding-bottom: 10px;
+gap: 10px;
+justify-content: flex-start;
+-webkit-overflow-scrolling: touch;
+}
+ container[type="var-b"] {
+  padding: 25px !important;
+  height: auto;
+}
+
+.container {
+position: relative;
+text-align: right;
+padding: 10px;
+right: 10px;
+bottom: 0;
+ }
+} 
+h1, h2 {
+  font-family: 'Roboto Light';
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+container[type="var-a"] {
+  padding: 20px;
+  width: 35%;
+}
+
+div[type="mainpage"] > cr {
+  margin: 20px 0px 20px 0px;
+  border-right: solid 0.5px rgb(255 255 255 / 45%);
+}
+
+container[type="var-a"] > img {
+  width: calc(100% / 1.75);
+}
+
+container[type="var-a"] > h1 {
+  margin: 10px 0px 10px 0px;
+  font-size: calc(100% * 2.5);
+}
+
+container[type="var-a"] > p {
+  margin: 0;
+  font-size: calc(100% * 1.075);
+}
+
+container[type="var-b"] {
+  padding: 40px !important;
+  width: 100%;
+  height: 100%; 
+  overflow-y: auto;
+  overflow-x: hidden; 
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+container[type="var-b"] > div {
+  width: 100%;
+  height: auto; 
+}
+
+p, h1, h2, span {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+container[type="var-b"] p {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  line-height: 1.6;
+}
+container[type="var-b"]::-webkit-scrollbar {
+  width: 8px;
+}
+container[type="var-b"]::-webkit-scrollbar-track {
+  background: transparent;
+}
+container[type="var-b"]::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+container[type="var-a"] > div.tabs {
+  margin-top: 15px;
+}
+
+container[type="var-a"] > div.tabs > .liquid-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  flex: 0 0 auto; 
+  margin-top: 5px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9); 
+  font-weight: 500;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08); 
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+  inset 0 1px 1px rgba(255, 255, 255, 0.1),
+  0 4px 10px rgba(0, 0, 0, 0.1);
+}
+container[type="var-a"] > div.tabs > .liquid-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(  90deg,transparent, rgba(255, 255, 255, 0.2), transparent );
+  transition: 0.5s;
+}
+container[type="var-a"] > div.tabs > .liquid-button:hover {
+  transform: scale(1.05); 
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5),
+    0 8px 20px rgba(0, 0, 0, 0.15);
+}
+container[type="var-a"] > div.tabs > .liquid-button:hover::before {
+  left: 100%;
+}
+container[type="var-a"] > div.tabs > .liquid-button:active {
+  transform: translateY(1px) scale(0.98);
+  background: rgba(255, 255, 255, 0.1);
+}
+container[type="var-a"] > div.tabs > .liquid-button.active {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+container[type="var-b"] > div {
+  width: 100%;
+  height: 100%;
+}
+input[type="submit"].liquid-button {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+input[type="submit"].liquid-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+container[type="var-b"] > div#gimmicks-pge > form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+container[type="var-b"] > div#gimmicks-pge > form > input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  color: white;
+  outline: none;
+  margin-right: 0;
+}
+container[type="var-b"] > div#gimmicks-pge > form > input[type="text"]:focus {
+  background: rgba(255, 81, 81, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+container[type="var-b"] > div#gimmicks-pge > form > input[type="submit"] {
+  width: fit-content;
+  padding: 10px 25px;
+  align-self: flex-start;
+}
+container[type="var-b"] > div#gimmicks-pge input[type="submit"] {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+container[type="var-b"] > div#gimmicks-pge input[type="submit"]:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+container[type="var-b"] h1 {
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  font-family: 'Roboto', sans-serif;
+}
+container[type="var-b"] p {
+  line-height: 1.6; 
+  margin-bottom: 15px;
+}
+container[type="var-b"] > div#gimmicks-pge input[type="text"] {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.1); 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+  outline: none;
+  backdrop-filter: blur(5px);
+  transition: border 0.3s;
+}
+container[type="var-b"] > div#gimmicks-pge input[type="text"]:focus {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.hide {
+  display: none !important;
+}
+container[type="var-b"] {
+  display: block;
+  overflow-x: hidden !important;
+  position: relative;
+  padding: 40px;
+  height: 100%;
+  overflow-y: auto;
+  flex-direction: column;
+}
+.container {
+  position: absolute;
+  bottom: 10px;
+  right: 20px; 
+  height: auto !important;
+  width: auto !important;
+  pointer-events: none;
+  z-index: 999;
+}
+.container span {
+font-size: 11px;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: 'Inter', sans-serif;
+  position: static !important;
+}
+#form-status {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  color: #d494ff; 
+  font-weight: bold;
+  display: none;
+}
+.show-status {
+  display: block !important;
+  animation: slideUp 0.4s ease-out forwards;
+}
+#fname::placeholder {
+  color: rgba(255, 255, 255, 0.612); 
+}
+
+/* slide animation */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideRight {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideLeft {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+.slide-right {
+    animation: slideRight 0.4s ease-out forwards;
+}
+.slide-left {
+    animation: slideLeft 0.4s ease-out forwards;
+}
