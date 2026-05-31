@@ -88,8 +88,8 @@ button {
   -webkit-backdrop-filter: blur(25px) saturate(150%);
   border-radius: 25px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  height: 65%;
-  width: 85%;
+  height: 75%;
+  width: 90%;
   position: fixed;
   left: 50%;
   top: 50%;
