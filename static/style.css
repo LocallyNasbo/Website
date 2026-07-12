@@ -149,6 +149,10 @@ h1, h2 {
 }
 
 container[type="var-a"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; 
   padding: 20px;
   width: 35%;
 }
@@ -180,7 +184,7 @@ container[type="var-a"] > div:first-of-type {
   gap: 15px;
   margin-bottom: 10px;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: flex-start; /* Forces avatar and name left */
 }
 container[type="var-b"] {
   padding: 40px !important;
@@ -298,6 +302,7 @@ input[type="submit"].liquid-button:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* form */
 container[type="var-b"] > div#gimmicks-pge > form {
   margin-top: 15px;
   display: flex;
