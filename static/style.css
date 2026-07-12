@@ -180,7 +180,7 @@ container[type="var-a"] > div:first-of-type {
   gap: 15px;
   margin-bottom: 10px;
   width: 100%;
-  justify-content: flex-start; /* Forces avatar and name left */
+  justify-content: flex-start;
 }
 container[type="var-b"] {
   padding: 40px !important;
