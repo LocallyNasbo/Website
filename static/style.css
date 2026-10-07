@@ -105,7 +105,7 @@ img {
 }
 
 @media screen and (max-width: 800px) {
-  [type="mainpage"] {
+[type="mainpage"] {
 flex-direction: column;
 height: 95%;
 width: 95%;
@@ -125,9 +125,9 @@ justify-content: center;
 }
 container[type="var-a"] > div.tabs {
 display: flex;
-overflow-x: auto;
-padding-bottom: 10px;
-gap: 10px;
+overflow-x: fixed;
+padding-bottom: 2px;
+gap: 5px;
 justify-content: flex-start;
 -webkit-overflow-scrolling: touch;
 }
